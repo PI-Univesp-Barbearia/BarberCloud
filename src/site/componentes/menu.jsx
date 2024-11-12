@@ -3,7 +3,7 @@ import React from 'react';
 
 
 function Menu(){
-    return <nav className="navbar navbar-expand-lg navbar-dark">
+    return <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
     
     <div className="container">
 
@@ -18,10 +18,16 @@ function Menu(){
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto">          
             <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/"> Home</a> 
+                <a className="nav-link" aria-current="page" href="#banner"> Home</a> 
             </li>
             <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/">Cadastrar-se</a>
+                <a className="nav-link" aria-current="page" href="#precos">Preços</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="#testemunho">Clientes</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="#footer">Contato</a>
             </li>
             </ul>
         </div>  
