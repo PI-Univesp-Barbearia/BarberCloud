@@ -2,6 +2,10 @@ h1, h2, h3, h4, h5{
     line-height: 1.5;
 }
 
+p{
+    color: grey;
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -25,4 +29,46 @@ h1, h2, h3, h4, h5{
 
 .btn-banner{
     margin: 8% 3% 5% 0;
+}
+
+/* FEATURES */
+
+#features{
+    padding: 7% 5%;
+}
+
+
+.feature-box{
+    text-align: center;
+    padding: 5%;
+}
+
+.icon{
+    margin-bottom: 15px;
+    color: blue;
+}
+
+/* TESTEMUNHOSS */
+
+#testemunho{
+    background-color:#f3f3f3;
+    color: #323338;
+    padding: 7% 15%;
+    text-align: center;
+}
+
+#testemunho img{
+    border-radius: 100%;
+    margin: 0%;
+    margin: 20px;
+}
+
+/* PREÇOS */
+#precos .titulo{
+   margin-top: 5%;
+}
+
+#precos{
+    padding: 5% 15% 8%;
+    color: #323338;
 }

@@ -1,20 +1,28 @@
 import React from 'react';
 
 function Features(){
-    return <section id="banner">
+    return <section id="features">
         <div className='container'>
             <div className='row'>
 
-                <div className='col-lg-6 col-md-6'>
-                    <h1>Bem-vindo ao BarberCloud: Agende seu corte de cabelo de forma inteligente</h1>
-                    <h4>Faça seu agendamento agora</h4>
-                    <button type='button' className='btn btn-dark btn-lg btn-banner'>Criar conta</button>
-                    <button type='button' className='btn btn-outline-light btn-lg btn-banner'>Fazer login</button>
+                <div className='col-lg-4 col-md-6 feature-box'>
+                    <i className="icon fa-solid fa-heart fa-3x"></i>
+                    <h3>Facil de Usar</h3>
+                    <p>O sistema possui uma interface muito simples e fácil de usar</p>
                 </div>
 
-                <div className='col-lg-6 col-md-6'>
-                    <img src="./images/corte-background.png" alt="corte de cabelo" />
+                <div className='col-lg-4 col-md-6 feature-box'>
+                    <i className="icon fa-solid fa-earth-americas fa-3x"></i>
+                    <h3>Em qualquer lugar</h3>
+                    <p>Faça o agendamento quando e de onde quiser</p>
                 </div>
+
+                <div className='col-lg-4 col-md-6 feature-box'>
+                    <i className="icon fa-solid fa-table-columns fa-3x"></i>
+                    <h3>Organização é tudo</h3>
+                    <p>Tenha sua carteira de clientes sempre muito bem organizada</p>
+                </div>
+    
 
             </div>
         </div>
