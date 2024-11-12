@@ -1,3 +1,28 @@
-.titulo{
-    color: blue;
+h1, h2, h3, h4, h5{
+    line-height: 1.5;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: blue;
+}
+
+.logo-navbar {
+    height: 45px;
+}
+
+#banner{
+    background-color: blue;
+    color: white;
+    padding: 100px 0 70px 0;
+
+}
+
+#banner img{
+    width: 100%;
+}
+
+.btn-banner{
+    margin: 8% 3% 5% 0;
 }
