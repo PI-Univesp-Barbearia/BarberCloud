@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import './agenda.css'
-import Navbar from '../componentes/navbar/navbar';
 
 
 function SchedulePage() {
@@ -34,7 +33,6 @@ function SchedulePage() {
 
   return (
     <div className="schedule-page">
-      
       <h2>Agendar um Horário</h2>
 
       <div className="calendar-container">

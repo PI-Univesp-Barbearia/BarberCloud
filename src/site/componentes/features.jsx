@@ -8,19 +8,20 @@ function Features(){
                 <div className='col-lg-4 col-md-6 feature-box'>
                     <i className="icon fa-solid fa-heart fa-3x"></i>
                     <h3>Facil de Usar</h3>
-                    <p>O sistema possui uma interface muito simples e fácil de usar</p>
+                    <p>"Nossa interface intuitiva garante que você consiga navegar e usar o sistema sem complicações, tornando o agendamento rápido e fácil."
+                    </p>
                 </div>
 
                 <div className='col-lg-4 col-md-6 feature-box'>
                     <i className="icon fa-solid fa-earth-americas fa-3x"></i>
                     <h3>Em qualquer lugar</h3>
-                    <p>Faça o agendamento quando e de onde quiser</p>
+                    <p>"Agende seus horários de corte de cabelo a qualquer momento e de qualquer lugar, seja no trabalho, em casa ou até mesmo no transporte."</p>
                 </div>
 
                 <div className='col-lg-4 col-md-6 feature-box'>
                     <i className="icon fa-solid fa-table-columns fa-3x"></i>
-                    <h3>Organização é tudo</h3>
-                    <p>Tenha sua carteira de clientes sempre muito bem organizada</p>
+                    <h3>Mobilidade</h3>
+                    <p>"Com o nosso sistema, você tem o controle total dos agendamentos na palma da sua mão, proporcionando maior conveniência e praticidade no seu dia a dia."</p>
                 </div>
     
 

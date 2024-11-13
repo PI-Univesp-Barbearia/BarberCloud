@@ -78,6 +78,14 @@ p{
     color: #323338;
 }
 
+.card {
+    min-height: 400px; /* Ajuste o valor conforme necessário */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 /* FOOTER */
 
 #footer{
@@ -95,3 +103,5 @@ p{
     padding: 0 15%; /* Adiciona espaço nas laterais para que o texto não encoste nas setas */
   }
   
+ 
+
