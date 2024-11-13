@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './navbar.css';
 
 
-
-function Menu(){
+function Navbar(){
     return <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
     
-    <div className="container">
+    <div className="container fluid">
 
-        <a className="navbar-brand" href="#banner">
-            <img src="./images/logo-barber-cloud.png" alt="" className="logo-navbar"/>
+        <a className="navbar-brand" href="/">
+            <img src="/images/logo-barber-cloud.png" alt="" className="logo-navbar" height="50"/>
         </a>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,24 +17,20 @@ function Menu(){
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto">          
+            <ul className="navbar-nav">      
             <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#banner">Home</a> 
+                <Link to='/app/home'className="nav-link" aria-current="page">Home</Link> 
+            </li>    
+            <li className="nav-item">
+                <Link to='/app/novocliente'className="nav-link" aria-current="page">Novo Cliente</Link> 
             </li>
             <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#precos">Preços</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#testemunho">Clientes</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#footer">Contato</a>
+                <Link to='/app'className="nav-link" aria-current="page">Sair</Link> 
             </li>
             </ul>
         </div>  
       </div>
     </nav>
-
 }
 
-export default Menu;
+export default Navbar;

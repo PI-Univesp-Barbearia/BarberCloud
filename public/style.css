@@ -90,3 +90,8 @@ p{
 .carousel-item{
     text-align: center;
 }
+
+.carousel-inner h2 {
+    padding: 0 15%; /* Adiciona espaço nas laterais para que o texto não encoste nas setas */
+  }
+  

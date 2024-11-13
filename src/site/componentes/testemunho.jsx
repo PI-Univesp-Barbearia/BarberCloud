@@ -7,13 +7,13 @@ function Testemunho(){
         <div id="carouselExampleInterval" className="carousel carousel-dark  slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval="5000">
-                        <h2>Excelente ferramenta para acompanhamento do dia a dia, sendo flexível o suficiente para a maior parte dos usos. Seja para controle de CRM ou para controle de visitas, o 99 CRM tem se revelado uma ferramenta muito útil e intuitiva.</h2>
+                        <h2>"A melhor experiência em barbearia que já tive! O ambiente é acolhedor, e os barbeiros realmente entendem o que estão fazendo. Saí completamente satisfeito com o meu corte!".</h2>
                         <em>Marcio Martins - São Paulo</em>  
                     </div>      
 
                     <div className="carousel-item" data-bs-interval="5000">
-                        <h2>Excelente ferramenta para acompanhamento do dia a dia, sendo flexível o suficiente para a maior parte dos usos. Seja para controle de CRM ou para controle de visitas, o 99 CRM tem se revelado uma ferramenta muito útil e intuitiva.</h2> 
-                        <em>João Silva - Rio de Janeiro</em>  
+                        <h2>"Serviço impecável! Desde a recepção até o corte final, fui bem atendido. É muito fácil agendar pelo site, e os horários são sempre cumpridos. Recomendo para quem quer qualidade e pontualidade.".</h2> 
+                        <em>João Silva - São Paulo</em>  
                     </div>      
 
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
