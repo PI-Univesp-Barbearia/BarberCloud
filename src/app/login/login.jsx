@@ -1,25 +1,57 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {useState} from 'react';
+import {Link, useNavigate} from 'react-router-dom';
 import './login.css';
 
 
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import '../Config/firebase.js';
+
+
 function Login(){
+
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [sucesso, setSucesso] = useState('');
+    const navigate = useNavigate(); // Hook para redirecionamento de página
+
+    function LoginUsuario(){
+        const auth = getAuth();
+        signInWithEmailAndPassword (auth, email, senha)
+            .then(function(firebaseUser){
+                setSucesso('S');
+                navigate('/app/agenda');
+            })
+            .catch(function(error){
+                setSucesso('N');
+            });
+    }
+
+    function alterarEmail(evento){
+        setEmail(evento.target.value);
+    }
+
+    function alterarSenha(evento){
+        setSenha(evento.target.value);
+    }
+
     return <div className='d-flex align-items-center text-center form-container'>
         <form className='form-signin'>
             <img className="mb-4" src="./images/logo-barber-cloud.png" alt="" height="90"/>
             <h1 className="h3 mb-3 fw-normal">Login</h1>
 
             <div className="form-floating">
-                <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
+                <input onChange={alterarEmail} type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
                 <label for="floatingInput">E-mail</label>
             </div>
 
             <div className="form-floating">
-                <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
+                <input onChange={alterarSenha} type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
                 <label for="floatingPassword">Senha</label>
             </div>
 
-            <button className="btn btn-primary w-100 py-2" type="submit">Acessar</button>
+            <button onClick={LoginUsuario} className="btn btn-primary w-100 py-2" type="button">Acessar</button>
+
+            {sucesso === 'N' ? <div className="alert alert-danger mt-2" role="alert">Email ou senha inválidos</div> :null}
 
             <div className="login-links mt-5">
                 <Link to='/app/resetsenha' className='mx-3'>Esqueci minha senha</Link> 

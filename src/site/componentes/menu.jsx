@@ -3,7 +3,7 @@ import React from 'react';
 
 
 function Menu(){
-    return <nav className="navbar fixed-top navbar-expand-lg ">
+    return <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
     
     <div className="container">
 
