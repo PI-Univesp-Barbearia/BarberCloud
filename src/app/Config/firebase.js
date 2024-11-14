@@ -1,8 +1,8 @@
-
 // Importar os módulos necessários do Firebase
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyAKfNJTIl6crlC9nsFAsQqp8yk4VHeodWg",
@@ -20,4 +20,6 @@ const app = initializeApp(firebaseConfig);
 // Exportar os serviços que você vai usar
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+
 // Exporte outros serviços se necessário
+

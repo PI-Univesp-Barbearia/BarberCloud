@@ -41,12 +41,12 @@ function Login(){
 
             <div className="form-floating">
                 <input onChange={alterarEmail} type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
-                <label for="floatingInput">E-mail</label>
+                <label htmlFor="floatingInput">E-mail</label>
             </div>
 
             <div className="form-floating">
                 <input onChange={alterarSenha} type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-                <label for="floatingPassword">Senha</label>
+                <label htmlFor="floatingPassword">Senha</label>
             </div>
 
             <button onClick={LoginUsuario} className="btn btn-primary w-100 py-2" type="button">Acessar</button>

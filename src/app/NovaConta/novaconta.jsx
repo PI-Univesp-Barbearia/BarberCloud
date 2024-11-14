@@ -2,31 +2,45 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './novaconta.css';
 
-import '../Config/firebase.js';
-import "firebase/auth";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, collection, addDoc } from "firebase/firestore"; // Adicionando funções do Firestore
 
 function NovaConta() {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const [nome, setNome] = useState('');  // Novo campo para o nome
+    const [telefone, setTelefone] = useState('');  // Novo campo para o telefone
     const [mensagem, setMensagem] = useState('');
 
     function cadastrarUsuario(e) {
         e.preventDefault();  // Impede o recarregamento da página
         setMensagem('');
 
-        if (!email || !senha) {
+        if (!email || !senha || !nome || !telefone) {  // Verificando se todos os campos foram preenchidos
             setMensagem('Informe todos os campos');
             return;
         }
 
         const auth = getAuth();
+        const db = getFirestore();  // Inicializando Firestore
+
+        // Criando o usuário no Firebase Authentication
         createUserWithEmailAndPassword(auth, email, senha)
-            .then(resultado => {
+            .then(async (resultado) => {
+                // Após criar o usuário no Auth, salvar os dados no Firestore
+                await addDoc(collection(db, 'clientes'), {
+                    nome: nome,
+                    email: email,
+                    telefone: telefone,
+                    uid: resultado.user.uid,  // Armazenando o ID do usuário no Firebase Auth
+                });
+
                 alert('Usuário cadastrado com sucesso');
                 setEmail('');
                 setSenha('');
+                setNome('');
+                setTelefone('');
             })
             .catch(erro => {
                 if (erro.code === 'auth/email-already-in-use') {
@@ -48,8 +62,18 @@ function NovaConta() {
                 <h1 className="h3 mb-3 fw-normal">Criar Conta</h1>
 
                 <div className="form-floating">
-                    <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="floatingInput" placeholder="name@example.com" value={email}/>
-                    <label htmlFor="floatingInput">E-mail</label>
+                    <input onChange={(e) => setNome(e.target.value)} type="text" className="form-control" id="floatingName" placeholder="Nome" value={nome} />
+                    <label htmlFor="floatingName">Nome</label>
+                </div>
+
+                <div className="form-floating">
+                    <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="floatingEmail" placeholder="name@example.com" value={email}/>
+                    <label htmlFor="floatingEmail">E-mail</label>
+                </div>
+
+                <div className="form-floating">
+                    <input onChange={(e) => setTelefone(e.target.value)} type="text" className="form-control" id="floatingPhone" placeholder="Telefone" value={telefone} />
+                    <label htmlFor="floatingPhone">Telefone</label>
                 </div>
 
                 <div className="form-floating">

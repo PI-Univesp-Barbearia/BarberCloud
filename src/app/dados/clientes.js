@@ -2,7 +2,7 @@ const clientes = [
     
     {
         id: 1,
-        nome: "Vinicius",
+        nome: "Vinicius de Oliveira",
         email: "teste@teste.com",
         telefone: "999999999"
         
@@ -10,7 +10,7 @@ const clientes = [
     
     {
         id: 2,
-        nome: "Lucas",
+        nome: "Lucas de Oliveira",
         email: "teste@teste.com",
         telefone: "999999999"
     }
