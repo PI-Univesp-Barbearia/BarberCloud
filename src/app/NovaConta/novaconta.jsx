@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Importando useNavigate
 import './novaconta.css';
 
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
@@ -12,6 +12,8 @@ function NovaConta() {
     const [nome, setNome] = useState('');  // Novo campo para o nome
     const [telefone, setTelefone] = useState('');  // Novo campo para o telefone
     const [mensagem, setMensagem] = useState('');
+
+    const navigate = useNavigate();  // Inicializando o useNavigate
 
     function cadastrarUsuario(e) {
         e.preventDefault();  // Impede o recarregamento da página
@@ -37,6 +39,11 @@ function NovaConta() {
                 });
 
                 alert('Usuário cadastrado com sucesso');
+                
+                // Redireciona para a página de login após o sucesso no cadastro
+                navigate('/app');  // Alterando para a rota do login (ajuste conforme necessário)
+
+                // Limpa os campos após o cadastro
                 setEmail('');
                 setSenha('');
                 setNome('');

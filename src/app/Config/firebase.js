@@ -2,6 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 
 
 const firebaseConfig = {
@@ -21,5 +22,19 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 
-// Exporte outros serviços se necessário
-
+export const registerAppointment = async (clienteId, nome, telefone, email, data, hora) => {
+  try {
+    // Adiciona um novo documento na coleção 'Agendamentos'
+    const docRef = await addDoc(collection(db, 'Agendamentos'), {
+      clienteId,
+      nome,
+      telefone,
+      email,
+      data,
+      hora
+    });
+    console.log('Agendamento registrado com sucesso!', docRef.id);
+  } catch (error) {
+    console.error('Erro ao adicionar o agendamento:', error);
+  }
+};

@@ -19,13 +19,10 @@ function Navbar(){
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">      
             <li className="nav-item">
-                <Link to='/app/home'className="nav-link" aria-current="page">Home</Link> 
+                <Link to='/app/agenda2'className="nav-link" aria-current="page">Clientes</Link> 
             </li>    
             <li className="nav-item">
-                <Link to='/app/novocliente'className="nav-link" aria-current="page">Novo Cliente</Link> 
-            </li>
-            <li className="nav-item">
-                <Link to='/app'className="nav-link" aria-current="page">Sair</Link> 
+                <Link to='/app/agendabarbeiro'className="nav-link" aria-current="page">Agenda</Link> 
             </li>
             </ul>
         </div>  
