@@ -31,12 +31,7 @@ function ListaAgendamentos() {
 
         getAgendamentos();
     }, []);
-
-    // Função para formatar a data no formato brasileiro (DD/MM/YYYY)
-    const formatarData = (data) => {
-        const date = new Date(data);
-        return date.toLocaleDateString("pt-BR"); // Formato brasileiro: DD/MM/YYYY
-    };
+   
 
     return (
         <div className="page-container">
@@ -57,7 +52,7 @@ function ListaAgendamentos() {
                             <tr key={agendamento.id}>
                                 <td>{agendamento.nome}</td>
                                 <td>{agendamento.telefone}</td>
-                                <td>{formatarData(agendamento.data)}</td> {/* Aplica a formatação na data */}
+                                <td>{agendamento.data}</td> {/* Aplica a formatação na data */}
                                 <td>{agendamento.hora}</td>
                             </tr>
                         ))}
